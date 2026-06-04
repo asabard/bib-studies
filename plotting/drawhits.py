@@ -138,9 +138,10 @@ match det_file.short:
     case "IDEA":
         from IDEA import get_layer,get_module,get_sensor
     case "CLD":
-        from CLD import get_layer
+        
     case "ILD_FCCee":
         from ILD_FCCee import get_layer
+from CLD import get_layer, get_module, get_sensor
     case _:
         raise NotImplementedError(f"get_layer not implemented for detector {det_file.short}")
 
