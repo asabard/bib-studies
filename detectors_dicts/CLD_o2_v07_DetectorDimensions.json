@@ -1,0 +1,391 @@
+{
+  "ECalBarrel": {
+    "id": 20,
+    "typeFlag": 2066,
+    "hitsCollection": "ECalBarrelCollection",
+    "det_element_cells": {
+      "stave0": 40,
+      "stave1": 40,
+      "stave10": 40,
+      "stave11": 40,
+      "stave2": 40,
+      "stave3": 40,
+      "stave4": 40,
+      "stave5": 40,
+      "stave6": 40,
+      "stave7": 40,
+      "stave8": 40,
+      "stave9": 40
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 2210,
+    "max_r": 3450
+  },
+  "ECalEndcap": {
+    "id": 29,
+    "typeFlag": 2058,
+    "hitsCollection": "ECalEndcapCollection",
+    "det_element_cells": {
+      "ECalEndcap_B": 40,
+      "endcap": 40
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 2510,
+    "max_r": 3600
+  },
+  "HCalBarrel": {
+    "id": 10,
+    "typeFlag": 4114,
+    "hitsCollection": "HCalBarrelCollection",
+    "det_element_cells": {
+      "stave0": 44,
+      "stave1": 44,
+      "stave10": 44,
+      "stave11": 44,
+      "stave2": 44,
+      "stave3": 44,
+      "stave4": 44,
+      "stave5": 44,
+      "stave6": 44,
+      "stave7": 44,
+      "stave8": 44,
+      "stave9": 44
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 2220,
+    "max_r": 5230
+  },
+  "HCalEndcap": {
+    "id": 11,
+    "typeFlag": 4106,
+    "hitsCollection": "HCalEndcapCollection",
+    "det_element_cells": {
+      "HCalEndcap_B": 44,
+      "endcap": 44
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 3710,
+    "max_r": 5230
+  },
+  "HCalRing": {
+    "id": 12,
+    "typeFlag": 135178,
+    "hitsCollection": "HCalRingCollection",
+    "det_element_cells": {
+      "HCalRing_B": 7,
+      "endcap": 7
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 2540,
+    "max_r": 5230
+  },
+  "InnerTrackerBarrel": {
+    "id": 3,
+    "typeFlag": 17,
+    "hitsCollection": "InnerTrackerBarrelCollection",
+    "det_element_cells": {
+      "layer0": 896,
+      "layer1": 2752,
+      "layer2": 6532
+    },
+    "sensor_size_map": {
+      "layer0": 906.0100000000001,
+      "layer1": 906.0100000000001,
+      "layer2": 906.0100000000001
+    },
+    "sensors_per_module_map": {
+      "layer0": 32,
+      "layer1": 32,
+      "layer2": 46
+    },
+    "max_z": 700,
+    "max_r": 960
+  },
+  "InnerTrackerEndcap": {
+    "id": 4,
+    "typeFlag": 9,
+    "hitsCollection": "InnerTrackerEndcapCollection",
+    "det_element_cells": {
+      "layer-1": 144,
+      "layer1": 144,
+      "layer-2": 168,
+      "layer2": 168,
+      "layer-3": 144,
+      "layer3": 144,
+      "layer-4": 96,
+      "layer4": 96,
+      "layer-5": 144,
+      "layer5": 144,
+      "layer-6": 96,
+      "layer6": 96,
+      "layer-7": 96,
+      "layer7": 96
+    },
+    "sensor_size_map": {
+      "layer-1": 5016.220000000007,
+      "layer1": 5016.220000000007,
+      "layer-2": 9283.26428571431,
+      "layer2": 9283.26428571431,
+      "layer-3": 11020.483333333375,
+      "layer3": 11020.483333333375,
+      "layer-4": 15219.667499999996,
+      "layer4": 15219.667499999996,
+      "layer-5": 9196.403333333352,
+      "layer5": 9196.403333333352,
+      "layer-6": 12141.532500000001,
+      "layer6": 12141.532500000001,
+      "layer-7": 11571.507499999992,
+      "layer7": 11571.507499999992
+    },
+    "sensors_per_module_map": {
+      "layer-1": 24,
+      "layer1": 24,
+      "layer-2": 24,
+      "layer2": 24,
+      "layer-3": 24,
+      "layer3": 24,
+      "layer-4": 24,
+      "layer4": 24,
+      "layer-5": 24,
+      "layer5": 24,
+      "layer-6": 24,
+      "layer6": 24,
+      "layer-7": 24,
+      "layer7": 24
+    },
+    "max_z": 2200,
+    "max_r": 940
+  },
+  "LumiCal": {
+    "id": 15,
+    "typeFlag": 2090,
+    "hitsCollection": "LumiCalCollection",
+    "det_element_cells": {
+      "Calorimeter1": 1,
+      "Calorimeter2": 1
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 1190,
+    "max_r": 170
+  },
+  "LumiCalBackShield": {
+    "id": 18,
+    "typeFlag": 147496,
+    "hitsCollection": "LumiCalCollection",
+    "det_element_cells": {
+      "Calorimeter1": 1,
+      "Calorimeter2": 1
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 1200,
+    "max_r": 210
+  },
+  "LumiCalCooling": {
+    "id": 17,
+    "typeFlag": 147496,
+    "hitsCollection": "LumiCalCollection",
+    "det_element_cells": {
+      "Calorimeter1": 1,
+      "Calorimeter2": 1
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 1190,
+    "max_r": 210
+  },
+  "LumiCalInstrumentation": {
+    "id": 16,
+    "typeFlag": 147496,
+    "hitsCollection": "LumiCalCollection",
+    "det_element_cells": {
+      "Calorimeter1": 1,
+      "Calorimeter2": 1
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 1190,
+    "max_r": 200
+  },
+  "OuterTrackerBarrel": {
+    "id": 5,
+    "typeFlag": 17,
+    "hitsCollection": "OuterTrackerBarrelCollection",
+    "det_element_cells": {
+      "layer0": 17808,
+      "layer1": 27888,
+      "layer2": 37968
+    },
+    "sensor_size_map": {
+      "layer0": 906.0100000000001,
+      "layer1": 906.0100000000001,
+      "layer2": 906.0100000000001
+    },
+    "sensors_per_module_map": {
+      "layer0": 84,
+      "layer1": 84,
+      "layer2": 84
+    },
+    "max_z": 1270,
+    "max_r": 3040
+  },
+  "OuterTrackerEndcap": {
+    "id": 6,
+    "typeFlag": 9,
+    "hitsCollection": "OuterTrackerEndcapCollection",
+    "det_element_cells": {
+      "layer-1": 192,
+      "layer1": 192,
+      "layer-2": 192,
+      "layer2": 192,
+      "layer-3": 192,
+      "layer3": 192,
+      "layer-4": 192,
+      "layer4": 192
+    },
+    "sensor_size_map": {
+      "layer-1": 77765.21500000008,
+      "layer1": 77765.21500000008,
+      "layer-2": 77765.21500000008,
+      "layer2": 77765.21500000008,
+      "layer-3": 77765.21500000008,
+      "layer3": 77765.21500000008,
+      "layer-4": 77765.21500000008,
+      "layer4": 77765.21500000008
+    },
+    "sensors_per_module_map": {
+      "layer-1": 48,
+      "layer1": 48,
+      "layer-2": 48,
+      "layer2": 48,
+      "layer-3": 48,
+      "layer3": 48,
+      "layer-4": 48,
+      "layer4": 48
+    },
+    "max_z": 2200,
+    "max_r": 2950
+  },
+  "VertexBarrel": {
+    "id": 1,
+    "typeFlag": 337,
+    "hitsCollection": "VertexBarrelCollection",
+    "det_element_cells": {
+      "layer_0": 16,
+      "layer_1": 16,
+      "layer_2": 12,
+      "layer_3": 12,
+      "layer_4": 16,
+      "layer_5": 16
+    },
+    "sensor_size_map": {
+      "layer_0": 1199.0,
+      "layer_1": 1199.0,
+      "layer_2": 4196.5,
+      "layer_3": 4196.5,
+      "layer_4": 5034.666400000001,
+      "layer_5": 5034.666400000001
+    },
+    "sensors_per_module_map": {
+      "layer_0": 1,
+      "layer_1": 1,
+      "layer_2": 1,
+      "layer_3": 1,
+      "layer_4": 1,
+      "layer_5": 1
+    },
+    "max_z": 110,
+    "max_r": 90
+  },
+  "VertexEndcap": {
+    "id": 2,
+    "typeFlag": 329,
+    "hitsCollection": "VertexEndcapCollection",
+    "det_element_cells": {
+      "layer-1": 8,
+      "layer1": 8,
+      "layer-2": 8,
+      "layer2": 8,
+      "layer-3": 8,
+      "layer3": 8,
+      "layer-4": 8,
+      "layer4": 8,
+      "layer-5": 8,
+      "layer5": 8,
+      "layer-6": 8,
+      "layer6": 8
+    },
+    "sensor_size_map": {
+      "layer-1": 4070.8908910027785,
+      "layer1": 4070.8908910027785,
+      "layer-2": 4070.8908910027785,
+      "layer2": 4070.8908910027785,
+      "layer-3": 3816.4602103151055,
+      "layer3": 3816.4602103151055,
+      "layer-4": 3816.4602103151055,
+      "layer4": 3816.4602103151055,
+      "layer-5": 3470.695439124164,
+      "layer5": 3470.695439124164,
+      "layer-6": 3470.695439124164,
+      "layer6": 3470.695439124164
+    },
+    "sensors_per_module_map": {
+      "layer-1": 8,
+      "layer1": 8,
+      "layer-2": 8,
+      "layer2": 8,
+      "layer-3": 8,
+      "layer3": 8,
+      "layer-4": 8,
+      "layer4": 8,
+      "layer-5": 8,
+      "layer5": 8,
+      "layer-6": 8,
+      "layer6": 8
+    },
+    "max_z": 310,
+    "max_r": 160
+  },
+  "YokeBarrel": {
+    "id": 13,
+    "typeFlag": 8210,
+    "hitsCollection": "YokeBarrelCollection",
+    "det_element_cells": {
+      "stave0": 7,
+      "stave1": 7,
+      "stave10": 7,
+      "stave11": 7,
+      "stave2": 7,
+      "stave3": 7,
+      "stave4": 7,
+      "stave5": 7,
+      "stave6": 7,
+      "stave7": 7,
+      "stave8": 7,
+      "stave9": 7
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 3760,
+    "max_r": 8790
+  },
+  "YokeEndcap": {
+    "id": 14,
+    "typeFlag": 8202,
+    "hitsCollection": "YokeEndcapCollection",
+    "det_element_cells": {
+      "YokeEndcap_B": 7,
+      "endcap": 7
+    },
+    "sensor_size_map": {},
+    "sensors_per_module_map": {},
+    "max_z": 5310,
+    "max_r": 8790
+  }
+}
