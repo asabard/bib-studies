@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "detector": "CLD_o2_v07",
+    "scope": "Full silicon tracker (Vertex + IT + OT)",
+    "strategy": "occupancy",
+    "schema_aligned_with": "drawhits.py + hits2highLevelEstimations.py",
+    "comments": [
+      "Same schema as the hit_counts variant, only 'strategy' differs.",
+      "Collection names below match TrackingDigiDetailed.py.",
+      "",
+      "IMPORTANT - meaning of 'occupancy' on CLD depends on which hits are read:",
+      "",
+      "  (1) SimHits (run WITHOUT --digi):",
+      "      cellID encodes individual pixels via the readout (CartesianGridYZ/XY).",
+      "      => drawhits.py occupancy = N_unique_pixel_cellIDs / N_cells",
+      "      is at PIXEL granularity natively.",
+      "",
+      "  (2) Digi hits from VTXdigitizerDetailed (run WITH --digi):",
+      "      one TrackerHitPlane per cluster, cellID = seed pixel.",
+      "      => drawhits.py occupancy = N_unique_cluster_seeds / N_cells",
+      "      is at CLUSTER (seed-pixel) granularity, NOT true pixel occupancy.",
+      "",
+      "In BOTH cases the denominator N_cells in DetectorDimensions.json is the",
+      "SENSOR count (e.g. 16 for VertexBarrel/layer_0). So if you want a real",
+      "PIXEL-level occupancy, post-process by multiplying by:",
+      "   sensor_size_map[layer] / pixel_area",
+      "with pixel_area in mm^2:",
+      "   - Vertex (B+E):                 0.020 * 0.020",
+      "   - IT/OT Barrel + OT Endcap:     0.050 * 0.300",
+      "   - IT Endcap signed +/-1:        0.020 * 0.020 (ARCADIA)",
+      "   - IT Endcap signed +/-2..+/-7:  0.050 * 0.300 (ATLASPix3)",
+      "",
+      "For most use cases the hit_counts strategy is simpler and unambiguous."
+    ]
+  },
+
+  "VertexBarrel": {
+    "hitsCollection": "VertexBarrelCollection",
+    "digitized_hits": {
+      "collection": "VXDTrackerHits",
+      "E_thr_MeV": 0.0
+    },
+    "E_thr_MeV": 0.0,
+    "strategy": "occupancy",
+    "hit_size": 32,
+    "multipliers": { "safety": 3.0, "data_link_overhead": 1.2 }
+  },
+
+  "VertexEndcap": {
+    "hitsCollection": "VertexEndcapCollection",
+    "digitized_hits": {
+      "collection": "VXDEndcapTrackerHits",
+      "E_thr_MeV": 0.0
+    },
+    "E_thr_MeV": 0.0,
+    "strategy": "occupancy",
+    "hit_size": 32,
+    "multipliers": { "safety": 3.0, "data_link_overhead": 1.2 }
+  },
+
+  "InnerTrackerBarrel": {
+    "hitsCollection": "InnerTrackerBarrelCollection",
+    "digitized_hits": {
+      "collection": "ITrackerHits",
+      "E_thr_MeV": 0.0
+    },
+    "E_thr_MeV": 0.0,
+    "strategy": "occupancy",
+    "hit_size": 32,
+    "multipliers": { "safety": 3.0, "data_link_overhead": 1.2 }
+  },
+
+  "InnerTrackerEndcap": {
+    "_comment": "MultiSegmentation: signed layers +/-1 use ARCADIA 20x20 um, +/-2..+/-7 use ATLASPix3 50x300 um. Per-layer hit_size keys follow the SIGNED convention from CLD.py::_walk_endcap_subdet.",
+    "hitsCollection": "InnerTrackerEndcapCollection",
+    "digitized_hits": {
+      "collection": "ITrackerEndcapHits",
+      "E_thr_MeV": 0.0
+    },
+    "E_thr_MeV": 0.0,
+    "strategy": "occupancy",
+    "hit_size": {
+      "1": 32, "2": 32, "3": 32, "4": 32, "5": 32, "6": 32, "7": 32,
+      "-1": 32, "-2": 32, "-3": 32, "-4": 32, "-5": 32, "-6": 32, "-7": 32
+    },
+    "multipliers": { "safety": 3.0, "data_link_overhead": 1.2 }
+  },
+
+  "OuterTrackerBarrel": {
+    "hitsCollection": "OuterTrackerBarrelCollection",
+    "digitized_hits": {
+      "collection": "OTrackerHits",
+      "E_thr_MeV": 0.0
+    },
+    "E_thr_MeV": 0.0,
+    "strategy": "occupancy",
+    "hit_size": 32,
+    "multipliers": { "safety": 3.0, "data_link_overhead": 1.2 }
+  },
+
+  "OuterTrackerEndcap": {
+    "hitsCollection": "OuterTrackerEndcapCollection",
+    "digitized_hits": {
+      "collection": "OTrackerEndcapHits",
+      "E_thr_MeV": 0.0
+    },
+    "E_thr_MeV": 0.0,
+    "strategy": "occupancy",
+    "hit_size": 32,
+    "multipliers": { "safety": 3.0, "data_link_overhead": 1.2 }
+  }
+}
