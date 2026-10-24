@@ -88,7 +88,7 @@ sub_detector = re.search(r"[0-9]+evt_([^_]+)", input_file_name).group(1)
 if sub_detector=="DCH": sub_detector="DCH_v2"
 if sub_detector=="EMEC": sub_detector="EMEC_turbine"
 
-if sub_detector in ["VertexBarrel", "VertexDisks", "SiWrB", "SiWrD"]:
+if sub_detector in ["VertexBarrel", "VertexDisks", "VertexEndcap", "SiWrB", "SiWrD"]:
     str_hit_rate = "pixel hit rate"
 else:
     str_hit_rate = "hit rate"

@@ -1,0 +1,308 @@
+{
+  "_meta": {
+    "detector": "CLD_o2_v08",
+    "scope": "Full silicon tracker (Vertex + IT + OT)",
+    "layer_keys": "Match CLD_o2_v08_DetectorDimensions.json exactly: 'layer_N' for VertexBarrel, 'layerN' for IT/OT barrels, signed 'layerN'/'layer-N' for all endcaps.",
+    "TO_VERIFY": [
+      "pixel_size_uv: values below are the CLD_o2_v07 baseline. Branch MAPS_geo_10mum_BIB_mdiv2 may use 10x10 um in the vertex - check the segmentation in the compact XML before trusting occupancy or bandwidth numbers.",
+      "E_thr_MeV = 0.0018 corresponds to 500 e- x 3.6 eV/pair. For a 100 e- threshold use 0.00036.",
+      "hit_size is in BITS per hit/cluster. 32 (pixel) and 64 (strip) are placeholders - tune to the real data format (header + col/row + ToT + timestamp)."
+    ]
+  },
+  "VertexBarrel": {
+    "strategy": "hit_counts",
+    "hit_size": 32,
+    "pixel_size_uv": {
+      "layer_0": [
+        0.02,
+        0.02
+      ],
+      "layer_1": [
+        0.02,
+        0.02
+      ],
+      "layer_2": [
+        0.02,
+        0.02
+      ],
+      "layer_3": [
+        0.02,
+        0.02
+      ],
+      "layer_4": [
+        0.02,
+        0.02
+      ],
+      "layer_5": [
+        0.02,
+        0.02
+      ]
+    },
+    "multipliers": {
+      "safety_factor": 3,
+      "cluster_size_IPC": 5,
+      "cluster_size_SR": 1.58
+    },
+    "E_thr_MeV": 0.00036,
+    "digitized_hits": {
+      "collection": "VXDTrackerHits",
+      "E_thr_MeV": 0.00036
+    }
+  },
+  "VertexEndcap": {
+    "strategy": "hit_counts",
+    "hit_size": 32,
+    "pixel_size_uv": {
+      "layer-6": [
+        0.02,
+        0.02
+      ],
+      "layer-5": [
+        0.02,
+        0.02
+      ],
+      "layer-4": [
+        0.02,
+        0.02
+      ],
+      "layer-3": [
+        0.02,
+        0.02
+      ],
+      "layer-2": [
+        0.02,
+        0.02
+      ],
+      "layer-1": [
+        0.02,
+        0.02
+      ],
+      "layer1": [
+        0.02,
+        0.02
+      ],
+      "layer2": [
+        0.02,
+        0.02
+      ],
+      "layer3": [
+        0.02,
+        0.02
+      ],
+      "layer4": [
+        0.02,
+        0.02
+      ],
+      "layer5": [
+        0.02,
+        0.02
+      ],
+      "layer6": [
+        0.02,
+        0.02
+      ]
+    },
+    "multipliers": {
+      "safety_factor": 3,
+      "cluster_size_IPC": 5,
+      "cluster_size_SR": 1.33
+    },
+    "E_thr_MeV": 0.00036,
+    "digitized_hits": {
+      "collection": "VXDEndcapTrackerHits",
+      "E_thr_MeV": 0.00036
+    }
+  },
+  "InnerTrackerBarrel": {
+    "strategy": "hit_counts",
+    "hit_size": 64,
+    "pixel_size_uv": {
+      "layer0": [
+        0.05,
+        0.3
+      ],
+      "layer1": [
+        0.05,
+        0.3
+      ],
+      "layer2": [
+        0.05,
+        0.3
+      ]
+    },
+    "multipliers": {
+      "safety_factor": 3,
+      "cluster_size_IPC": 5,
+      "cluster_size_SR": 1.19
+    },
+    "E_thr_MeV": 0.00036,
+    "digitized_hits": {
+      "collection": "ITrackerHits",
+      "E_thr_MeV": 0.00036
+    }
+  },
+  "InnerTrackerEndcap": {
+    "_comment": "MultiSegmentation: signed layers +/-1 use ARCADIA 20x20 um, +/-2..+/-7 use ATLASPix3 50x300 um.",
+    "strategy": "hit_counts",
+    "hit_size": {
+      "layer-7": 64,
+      "layer-6": 64,
+      "layer-5": 64,
+      "layer-4": 64,
+      "layer-3": 64,
+      "layer-2": 64,
+      "layer-1": 32,
+      "layer1": 32,
+      "layer2": 64,
+      "layer3": 64,
+      "layer4": 64,
+      "layer5": 64,
+      "layer6": 64,
+      "layer7": 64
+    },
+    "pixel_size_uv": {
+      "layer-7": [
+        0.05,
+        0.3
+      ],
+      "layer-6": [
+        0.05,
+        0.3
+      ],
+      "layer-5": [
+        0.05,
+        0.3
+      ],
+      "layer-4": [
+        0.05,
+        0.3
+      ],
+      "layer-3": [
+        0.05,
+        0.3
+      ],
+      "layer-2": [
+        0.05,
+        0.3
+      ],
+      "layer-1": [
+        0.02,
+        0.02
+      ],
+      "layer1": [
+        0.02,
+        0.02
+      ],
+      "layer2": [
+        0.05,
+        0.3
+      ],
+      "layer3": [
+        0.05,
+        0.3
+      ],
+      "layer4": [
+        0.05,
+        0.3
+      ],
+      "layer5": [
+        0.05,
+        0.3
+      ],
+      "layer6": [
+        0.05,
+        0.3
+      ],
+      "layer7": [
+        0.05,
+        0.3
+      ]
+    },
+    "multipliers": {
+      "safety_factor": 3,
+      "cluster_size_IPC": 5,
+      "cluster_size_SR": 1.38
+    },
+    "E_thr_MeV": 0.00036,
+    "digitized_hits": {
+      "collection": "ITrackerEndcapHits",
+      "E_thr_MeV": 0.00036
+    }
+  },
+  "OuterTrackerBarrel": {
+    "strategy": "hit_counts",
+    "hit_size": 64,
+    "pixel_size_uv": {
+      "layer0": [
+        0.05,
+        0.3
+      ],
+      "layer1": [
+        0.05,
+        0.3
+      ],
+      "layer2": [
+        0.05,
+        0.3
+      ]
+    },
+    "multipliers": {
+      "safety_factor": 3,
+      "cluster_size_IPC": 5,
+      "cluster_size_SR": 1.18
+    },
+    "E_thr_MeV": 0.00036,
+    "digitized_hits": {
+      "collection": "OTrackerHits",
+      "E_thr_MeV": 0.00036
+    }
+  },
+  "OuterTrackerEndcap": {
+    "strategy": "hit_counts",
+    "hit_size": 64,
+    "pixel_size_uv": {
+      "layer-4": [
+        0.05,
+        0.3
+      ],
+      "layer-3": [
+        0.05,
+        0.3
+      ],
+      "layer-2": [
+        0.05,
+        0.3
+      ],
+      "layer-1": [
+        0.05,
+        0.3
+      ],
+      "layer1": [
+        0.05,
+        0.3
+      ],
+      "layer2": [
+        0.05,
+        0.3
+      ],
+      "layer3": [
+        0.05,
+        0.3
+      ],
+      "layer4": [
+        0.05,
+        0.3
+      ]
+    },
+    "multipliers": {
+      "safety_factor": 3,
+      "cluster_size_IPC": 5,
+      "cluster_size_SR": 1.19
+    },
+    "E_thr_MeV": 0.00036,
+    "digitized_hits": {
+      "collection": "OTrackerEndcapHits",
+      "E_thr_MeV": 0.00036
+    }
+  }
+}
