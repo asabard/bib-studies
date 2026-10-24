@@ -99,7 +99,7 @@ JOBDIR=$PWD
 """
 else:
     fcc_dir = "/".join(fcc_cfg.split("/")[:4])  # get software stack directory
-    fcc_ver = fcc_cfg.split("/")[5]             # get the release number
+    fcc_ver = os.environ.get("key4hep_stack_version", fcc_cfg.split("/")[5])  # release number
     exec_header = f"""#!/bin/bash
 source {fcc_dir}/setup.sh --spack -r {fcc_ver}
 # Condor scratch dir: ddsim writes here, output is mv'd to EOS at the end
