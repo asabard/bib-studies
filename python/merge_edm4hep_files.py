@@ -20,6 +20,7 @@ Examples:
 """
 
 import argparse
+import gc
 import glob
 import os
 import re
@@ -252,8 +253,22 @@ def write_podio_metadata(out_file, used, layout):
         for frame in metadata_frames:
             frame.put_parameter("MergedInputFiles", [os.path.basename(p) for p in used])
             writer.write_frame(frame, "metadata")
-        writer.finish()
+        # podio_metadata est ecrit par le finish() de podio : sans cet appel
+        # l'arbre n'existe pas et le fichier est illisible. Le wrapper python
+        # de cette version ne l'expose pas, le writer C++ est dans "_writer".
+        for _obj in (writer, getattr(writer, "_writer", None)):
+            if _obj is not None and hasattr(_obj, "finish"):
+                _obj.finish()
+                break
+        else:
+            raise RuntimeError("aucun finish() trouve sur le writer podio")
         del writer, first
+        gc.collect()
+        # podio 1.7.0 n'expose aucune fermeture et PyROOT differe le destructeur :
+        # le TFile temporaire reste tronque. On le ferme explicitement.
+        for _tf in list(ROOT.gROOT.GetListOfFiles()):
+            if tmp_dir in _tf.GetName():
+                _tf.Close()
 
         tmp_file = ROOT.TFile.Open(tmp_path)
         for name in META_TREES:
